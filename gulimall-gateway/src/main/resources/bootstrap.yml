@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: gulimall_gateway
+  cloud:
+    nacos:
+      server-addr: 120.79.94.54:8848
+      discovery:
+        namespace: 3163a886-84b7-40f9-b0bf-7e1cbaccb86d
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 动态路由
+          lower-case-service-id: true
+server:
+  port: 80

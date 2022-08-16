@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: gulimall_member
+  datasource:
+    url: jdbc:mysql://localhost:3306/gulimall_ums
+  cloud:
+    nacos:
+      server-addr: 120.79.94.54:8848
+      discovery:
+        namespace: 3163a886-84b7-40f9-b0bf-7e1cbaccb86d
+      config:
+        username: nacos
+        password: nacos
+        namespace: 3163a886-84b7-40f9-b0bf-7e1cbaccb86d
+        extension-configs:
+          - data-id: mybatis-config.yml
+            refresh: true
+          - data-id: data-source.yml
+            refresh: true
+        file-extension: yml
+server:
+  port: 8000
